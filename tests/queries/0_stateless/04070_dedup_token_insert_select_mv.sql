@@ -5,6 +5,9 @@
 -- deduplicate_blocks_in_dependent_materialized_views for unsorted INSERT SELECT
 
 
+SET insert_deduplicate = 1;
+SET max_insert_threads = 1;
+
 DROP TABLE IF EXISTS t_src_04070 SYNC;
 DROP TABLE IF EXISTS t_mv_dst_04070 SYNC;
 DROP VIEW IF EXISTS mv_04070;
